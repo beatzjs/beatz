@@ -4,10 +4,23 @@
   "description": "Extensible platform for health checks",
   "main": "index.js",
   "scripts": {
-    "test": "nyc mocha"
+    "test": "nyc --report=lcov --reporter=text mocha",
+    "coverage": "cat ./coverage/lcov.info ~| coveralls"
   },
-  "author": "",
+  "keywords": [
+    "beatz",
+    "healthcheck"
+  ],
+  "author": "themagoo@hotmail.com",
   "license": "MIT",
+  "homepage": "https://github.com/beatzjs/beatz",
+  "bugs": {
+    "url": "https://github.com/beatzjs/beatz/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beatzjs/beatz.git"
+  },
   "dependencies": {
     "array-flatten": "^2.1.1",
     "merge-descriptors": "^1.0.1"
@@ -15,6 +28,7 @@
   "devDependencies": {
     "mocha": "^5.2.0",
     "nyc": "^12.0.2",
-    "should": "^13.2.1"
+    "should": "^13.2.1",
+    "coveralls": "^3.0.0"
   }
 }
