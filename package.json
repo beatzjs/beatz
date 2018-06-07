@@ -4,8 +4,8 @@
   "description": "Extensible platform for health checks",
   "main": "index.js",
   "scripts": {
-    "test": "nyc --report=lcov --reporter=text mocha",
-    "coverage": "cat ./coverage/lcov.info ~| coveralls"
+    "test": "nyc --reporter=text-lcov --reporter=text mocha",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "keywords": [
     "beatz",
